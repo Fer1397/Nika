@@ -2,64 +2,101 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mascota Encontrada</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soy Nika 🐶</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #fefefe;
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      background: #cce7ff;
+      margin: 0;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      text-align: center;
-      padding: 2em;
+      min-height: 100vh;
     }
+
     .card {
-      background: #fff;
-      border-radius: 16px;
-      padding: 2em;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      max-width: 400px;
-      width: 100%;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      text-align: center;
+      max-width: 320px;
     }
-    .pet-photo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1em;
-      border: 3px solid #4CAF50;
+
+    .dog-face {
+      width: 100px;
+      margin: 0 auto 20px;
     }
-    .pet-name {
-      font-size: 1.5em;
-      font-weight: bold;
-      margin-bottom: 0.3em;
+
+    h1 {
+      font-size: 1.8em;
+      color: #333;
+      margin-bottom: 15px;
     }
-    .owner-info {
+
+    p {
       font-size: 1.1em;
-      margin-bottom: 1em;
+      color: #444;
+      margin-bottom: 25px;
     }
+
     .call-button {
-      display: inline-block;
-      background-color: #4CAF50;
+      padding: 14px 24px;
+      background: #007BFF;
       color: white;
-      padding: 0.8em 1.5em;
-      border-radius: 8px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1em;
       text-decoration: none;
-      font-size: 1.2em;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
     }
+
     .call-button:hover {
-      background-color: #45a049;
+      background: #0069d9;
+    }
+
+    .phone-icon {
+      width: 20px;
+      height: 20px;
     }
   </style>
 </head>
 <body>
+
   <div class="card">
-    <img src="FOTO_DE_LA_MASCOTA.jpg" alt="Mascota" class="pet-photo" />
-    <div class="pet-name">🐶 Nika</div>
-    <div class="owner-info">Propietario: Mariángeles<br>Teléfono: 655716911</div>
-    <a href="tel:655716911" class="call-button">📞 Llamar al dueño</a>
+    <!-- Cara de perro simple en SVG -->
+    <svg class="dog-face" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+      <!-- Orejas -->
+      <polygon points="12,14 20,6 24,20" fill="#6B4F1D"/>
+      <polygon points="52,14 44,6 40,20" fill="#6B4F1D"/>
+      <!-- Cara -->
+      <circle cx="32" cy="32" r="18" fill="#D2A679"/>
+      <!-- Ojos -->
+      <circle cx="24" cy="30" r="3" fill="#000"/>
+      <circle cx="40" cy="30" r="3" fill="#000"/>
+      <!-- Nariz -->
+      <ellipse cx="32" cy="38" rx="4" ry="3" fill="#331A00"/>
+      <!-- Boca -->
+      <path d="M26 44 Q32 50 38 44" stroke="#331A00" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </svg>
+
+    <!-- Texto -->
+    <h1>Hola, soy Nika 🐶</h1>
+    <p>Por favor, pulsa el icono del teléfono y pregunta por Mariángeles.</p>
+
+    <!-- Botón de llamada -->
+    <a class="call-button" href="tel:+34655716911">
+      <svg class="phone-icon" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24">
+        <path d="M6.62 10.79a15.093 15.093 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.11-.21c1.12.45 2.33.69 3.48.69.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C9.39 21 3 14.61 3 6c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.15.24 2.36.69 3.48.17.45.06.96-.29 1.31l-2.28 2.28z"/>
+      </svg>
+      Llamar
+    </a>
   </div>
+
 </body>
 </html>
+
+   
